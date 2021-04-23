@@ -1,0 +1,15 @@
+/* Styles for skeleton.html */
+
+:root{
+    --body-content-margins: 10px;
+}
+
+body{
+    margin: var(--body-content-margins);
+}
+
+@media screen and (min-width:1100px){
+    #shelf-grid{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
