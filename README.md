@@ -9,4 +9,4 @@ Play with a nearby friend! You and your friend take alternating turns placing ma
 
 You can click the `Player 1` and `Player 2` buttons to change the names. You can also scroll to the bottom and click `Options` to reset the game.
 
-[Link to Tic Tac Toe](https://jql6.github.io/tictactoe)
+[Link to Tic Tac Toe](https://jql6.github.io/tictactoe/)
