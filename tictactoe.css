@@ -1,15 +1,167 @@
-/* Styles for skeleton.html */
+/* Styles for Tic Tac Toe */
 
 :root{
-    --body-content-margins: 10px;
+    --body-content-margins: auto;
+    --form-margins: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a:link{
+    color: rgb(97, 175, 239);
+}
+a:visited{
+    color: rgb(230, 180, 180);
 }
 
 body{
+    background-color: rgb(70, 70, 70);
+    color: white;
+    font-family: Verdana, Tahoma, sans-serif;
     margin: var(--body-content-margins);
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-@media screen and (min-width:1100px){
-    #shelf-grid{
-        grid-template-columns: repeat(5, 1fr);
+button{
+    background-color: #818181;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 32px;
+}
+
+button:hover{
+    background-color: #303030;
+}
+
+details{
+    margin-bottom: 5rem;
+}
+
+details section {
+    margin: 1rem auto;
+    max-width: 90%;
+}
+
+form{
+    margin: auto;
+    max-width: 90%;
+    text-align: center;
+}
+
+form * {
+    padding: 5px;
+    width: 100%;
+}
+
+summary {
+    background-color:rgba(255, 255, 255, 0.2);
+    margin: 0px;
+    padding: 1rem;
+}
+
+.form-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-container form {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.player{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.2rem;
+    margin: 0.5rem 0.3rem;
+    padding: 0.5rem;
+}
+
+.selected{
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 5px 5px white;
+}
+
+.square{
+    align-items: center;
+    color: black;
+    display: flex;
+    background-color: rgb(31, 197, 31);
+    border: 2px solid black;
+    font-size: 18vw;
+    justify-content: center;
+    width: 100%;
+}
+
+.square::before{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.spinning{
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.9) ;
+}
+
+#game-board{
+    display: grid;
+    margin: auto;
+    max-width: 600px;
+    user-select: none;
+    width: 70%;
+}
+
+#game-HUD{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: 75%;
+}
+
+#options{
+    background-color:rgba(0, 0, 0, 0.4);
+    color: white;
+    cursor: default;
+    font-size: 1.3rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    width: 70%;
+}
+
+#options button{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
     }
 }
+
+@media screen and (min-width:860px){
+    .square{
+        font-size: 10rem;
+    }
+}
+
+/**
+ * References
+ *
+ * Spinning animation:
+ * https://codepen.io/teerapuch/pen/vLJXeR
+ */

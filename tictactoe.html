@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="tictactoe.css">
     <meta charset="UTF-8"/>
     <meta name="description" content="tab name">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,10 +20,23 @@
       </p>
     </header>
 
-    <section id="game-board">
-
+    <section id="game-HUD">
+      <details class="player" id="player1">
+        <summary>Player 1</summary>
+        <section class="form-container" id="player1-form"></section>
+      </details>
+      <details class="player" id="player2">
+        <summary>Player 2</summary>
+        <section class="form-container" id="player2-form"></section>
+      </details>
+    </section>
+    <section id="game-board"></section>
+    <section id="options">
+      <details><summary>Options</summary>
+        <button id="reset">Reset</button>
+      </details>
     </section>
 
-    <script src="skeleton.js"></script>
+    <script src="tictactoe.js"></script>
   </body>
 </html>
